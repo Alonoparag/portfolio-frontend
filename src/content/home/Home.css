@@ -1,0 +1,130 @@
+.App{
+  height: 100%;
+  width: 100%;
+}
+
+/* =================================
+
+================================= */
+
+
+#home> *{
+  margin: 10px 3% 0;
+}
+
+/* =================================
+RESPONSIVE CLASSES
+================================= */
+
+
+
+
+ .contact-logo-mobile{
+  float: right;
+}
+@media only screen and (min-width: 780px){
+
+  #contact{
+    display: grid;
+    grid-template-columns: 50% 10% 40%;
+    grid-template-rows: 30% 30% 30%;
+    grid-column-gap: 20px;
+    grid-row-gap: 5px;
+    align-items: center;
+  }
+
+  #contact aside{
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  #contact div{
+    grid-column: 2/3;
+    grid-row: 1 span 3;
+    align-self: center;
+  }
+
+  #contact ul li{
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+
+  #contact ul li a:hover svg path:last-child{
+    fill: black;
+    transition: fill 1s;
+  }
+
+  #contact ul li a svg{
+    transition: 0.8s;
+  }
+
+  #contact ul li a:hover svg{
+    transform: rotateZ(360deg) rotateY(360deg);
+    transition: transform 1.5s;
+  }
+
+}
+
+
+
+/* =================================
+ABOUT
+================================= */
+.about-italicized{
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+#about img{
+  max-width: 100px;
+  float: right;
+  margin: 10px;
+}
+
+/* =================================
+PROJECTS
+================================= */
+#projects{
+  clear: both;
+  background-color: rgba(150, 150, 150, 0.4);
+  padding: 5%;
+  box-sizing: border-box;
+}
+
+#projects h1{
+  font-size: 2em;
+  line-height: 30px;
+  margin-bottom: 30px;
+  font-weight: 900;
+}
+
+#projects ul li div{
+  margin: 10px 0;
+}
+
+#projects ul li div h3{
+  font-size: 1.3em;
+  padding-bottom: 5px;
+  margin: 10px 0;
+}
+
+#projects ul li div p{
+  margin: 10px 0;
+  line-break: 10;
+}
+
+/* =================================
+CONTACT ME
+================================= */
+
+#contact h3{
+  margin: 5% 1%;
+  font-weight:100;
+  font-size: 2em;
+  line-height: 40px;
+  text-transform:capitalize;
+}
+
+#contact ul{
+  float: right;
+}

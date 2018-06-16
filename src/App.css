@@ -1,0 +1,206 @@
+/* =================================
+Reset
+================================= */
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* =================================
+GENERAL SETTINGS
+================================= */
+#root{
+  height: auto;
+  width: auto;
+}
+
+
+.App {
+  background: linear-gradient(312deg, #6FCF97 5%, rgba(255, 255, 255, 0) 30%), linear-gradient(312deg, #6F7AB3 20%, rgba(255, 255, 255, 0) 50%), linear-gradient(132deg, #6FCF97 10%, rgba(255, 255, 255, 0) 30%), linear-gradient(132deg, #6F7AB3 1%, rgba(255, 255, 255, 0) 15%), linear-gradient(180deg, #E0E0E0 0%, rgba(255, 255, 255, 0) 100%);
+  background-blend-mode: normal, normal, luminosity, normal, normal;
+}
+
+
+.App #home, .App #blog, .App #admin {
+  margin: 20px 5%;
+  font-family: 'Miriam Libre', Helvetica, sans-serif;
+  line-height: 20px;
+}
+
+.hide {
+  display: none;
+}
+
+/* =================================
+FLOAT GROUP AND CLEAR
+================================= */
+
+.group-float:before, .group-float:after {
+  content: "";
+  display: table;
+}
+
+.group-float:after {
+  clear: both;
+}
+
+.group-float {
+  clear: both;
+  *zoom: 1;
+}
+
+/* =================================
+NAVBAR
+================================= */
+
+nav {
+  background: linear-gradient(90deg, #4B0B70 0%, rgba(75, 11, 112, 0.29) 100%), rgba(52, 69, 158, 0.85);
+  mix-blend-mode: hard-light;
+  color: #fff;
+}
+
+nav img {
+  display: inline;
+  max-height: inherit;
+  box-sizing: border-box;
+}
+
+nav h2 {
+  display: none;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row;
+  margin: 15px 0;
+  float: right;
+}
+
+nav ul li a {
+  color: #fff;
+  /* display: inline flex; */
+  padding: 10px 5px;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  border-radius: 10px;
+  transition: background-color 0.3s, font-size 0.3s, letter-spacing 0.3s, color 0.3s;
+  text-decoration: none;
+}
+
+nav ul li a:hover, nav ul li a:active {
+  background-color: rgba(255, 255, 255, 0.6);
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
+  color: #4B0B70;
+  font-weight: 900;
+}
+
+/* =================================
+FOOTER
+================================= */
+
+footer {
+  clear: both;
+  position: relative;
+  width: 100vw;
+  bottom: 0;
+  order: 3;
+}
+/* =================================
+LARGE DISPLAY
+================================= */
+
+@media only screen and (min-width: 780px) {
+  .App {
+    display: grid;
+    grid-template-columns: 2% 10% 86% 2%;
+    grid-template-rows: auto 25px;
+    /* justify-content: start; */
+
+  }
+
+  /* .App:nth-child(even){
+    display: block;
+    grid-column: 3/ 4;
+    grid-row: 1 / 2;
+    box-sizing: border-box;
+  } */
+
+  .App #home, .App #blog, .App #admin{
+    display: block;
+    grid-column: 3/ 4;
+    grid-row: 1 / 2;
+    box-sizing: border-box;
+  }
+
+  nav {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: blue;
+  }
+  nav img{
+    max-width: 90%;
+    margin: 30px 10% 0;
+  }
+
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: column;
+    margin: 15px 10%;
+    float: none;
+  }
+  nav ul li{
+    margin: 5px;
+  }
+  nav ul li:hover{
+    padding: inherit 20px;
+    margin: 5px;
+  }
+
+  footer {
+    grid-column: 3/4;
+    grid-row: 2/ 2;
+  }
+}

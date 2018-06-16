@@ -1,0 +1,131 @@
+/* =================================
+Reset
+================================= */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* =================================
+GENERAL SETTINGS
+================================= */
+.App{
+  height: 100%;
+  background: linear-gradient(312deg, #6FCF97 5%, rgba(255, 255, 255, 0) 30%),
+  linear-gradient(312deg, #6F7AB3 20%, rgba(255, 255, 255, 0) 50%),
+  linear-gradient(132deg, #6FCF97 10%, rgba(255, 255, 255, 0) 30%),
+  linear-gradient(132deg, #6F7AB3 1%, rgba(255, 255, 255, 0) 15%),
+  linear-gradient(180deg, #E0E0E0 0%, rgba(255, 255, 255, 0) 100%);
+  background-blend-mode: normal, normal, luminosity, normal, normal;
+}
+.App #home, .App #blog{
+  /* max-width: 90vw; */
+  margin: 20px 5%;
+  /* background: linear-gradient(312.25deg, #6FCF97 0%, rgba(255, 255, 255, 0) 53.82%), linear-gradient(302.46deg, rgba(158, 127, 15, 0.56) 35.93%, rgba(255, 255, 255, 0) 73.73%), linear-gradient(180deg, #E0E0E0 0%, rgba(255, 255, 255, 0) 100%);
+  background-blend-mode: normal, difference, luminosity; */
+  font-family: 'Miriam Libre', Helvetica, sans-serif;
+  line-height: 20px;
+}
+
+section, footer, nav{
+  width: 100%;
+
+}
+
+aside{
+  height: 100%;
+}
+
+footer{
+  clear: both;
+}
+
+/* ================================ */
+body{
+  display: flex
+}
+section{
+  background-color: blue;
+  color: white;
+  font-size: 1.4em;
+  margin: 15px;
+  text-indent: 20px;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 45% 45%;
+}
+
+aside{
+  background-color: green;
+  color: white;
+  font-size: 1.4em;
+  margin: 15px;
+  text-indent: 20px;
+  /* position: absolute; */
+  height: 100vh;
+}
+
+.side{
+  grid-column: 1/2;
+  grid-row: 1 / span 2;
+  margin: 20px;
+  height: auto;
+  width: auto;
+  background-color: purple;
+  display: block;
+}
+
+.item{
+  margin: 20px;
+  height: 50px;
+  width: 50px;
+  background-color: purple;
+}
+
+.item:hover{
+    transform: rotateZ(180deg) rotateY(180deg);
+    transition: transform 0.5s;
+}
